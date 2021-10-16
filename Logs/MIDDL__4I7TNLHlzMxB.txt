@@ -1,0 +1,26 @@
+`bnw_bnw_app`.`articles_master`.`id` and  get IS NOT NULL data_1094279481
+`bnw_bnw_app`.`articles_master`.`title` and  get IS NOT NULL data_103895852
+`bnw_bnw_app`.`articles_master`.`article_text` and  get IS NOT NULL data_1029426653
+`bnw_bnw_app`.`articles_master`.`created` and  get IS NOT NULL data_1062302364
+`bnw_bnw_app`.`articles_master`.`last_modified` and  get IS NOT NULL data_105125326
+`bnw_bnw_app`.`articles_master`.`is_deleted` and  get IS NOT NULL data_1059505997
+`bnw_bnw_app`.`articles_cat`.`id` and `bnw_bnw_app`.`articles_master`.`cat_id` get IS NOT NULL data_2195141061
+`bnw_bnw_app`.`articles_cat`.`cat_name` and `bnw_bnw_app`.`articles_master`.`cat_id` get IS NOT NULL data_2125503732
+`bnw_bnw_app`.`articles_cat`.`cat_icon` and `bnw_bnw_app`.`articles_master`.`cat_id` get IS NOT NULL data_2135300493
+`bnw_bnw_app`.`articles_master`.`summary` and  get IS NOT NULL data_338297551011
+`bnw_bnw_app`.`images_master`.`id` and `bnw_bnw_app`.`articles_master`.`featured_image` OPPS NULL
+`bnw_bnw_app`.`images_master`.`images_url` and `bnw_bnw_app`.`articles_master`.`featured_image` OPPS NULL
+`bnw_bnw_app`.`images_master`.`alt_text` and `bnw_bnw_app`.`articles_master`.`featured_image` OPPS NULL
+`bnw_bnw_app`.`images_master`.`created_date` and `bnw_bnw_app`.`articles_master`.`featured_image` OPPS NULL
+`bnw_bnw_app`.`articles_master`.`url` and  get IS NOT NULL data_325384781016
+`bnw_bnw_app`.`user_accounts`.`userid` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_56557551003
+`bnw_bnw_app`.`user_accounts`.`firstname` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_553379081004
+`bnw_bnw_app`.`user_accounts`.`lastname` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_593972071005
+`bnw_bnw_app`.`user_accounts`.`gender` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_587384901006
+`bnw_bnw_app`.`user_accounts`.`email` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_575794801007
+`bnw_bnw_app`.`user_accounts`.`userpassword` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_531203311008
+`bnw_bnw_app`.`user_accounts`.`userroleid` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_561831591009
+`bnw_bnw_app`.`user_accounts`.`created` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_591390001010
+`bnw_bnw_app`.`user_accounts`.`freeze` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_54619041011
+`bnw_bnw_app`.`user_accounts`.`is_deleted` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_535700501012
+`bnw_bnw_app`.`user_accounts`.`freeze_point` and `bnw_bnw_app`.`articles_master`.`created_by` get IS NOT NULL data_555978731013

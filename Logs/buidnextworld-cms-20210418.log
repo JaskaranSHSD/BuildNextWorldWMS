@@ -1,0 +1,518 @@
+2021-04-18T17:56:51.8590176-04:00 80000002-0001-ff00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 235
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 53 (06c583d8)
+2021-04-18T20:05:11.4714074-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-18T20:05:11.4772180-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-18T22:17:55.2772859-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-18T22:17:55.2836264-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-18T22:57:53.1692663-04:00 8000002c-0002-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: SpringDell do not support more than 4 level relation
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (de9555ff)
+2021-04-18T22:59:47.7422940-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-18T22:59:47.7643938-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-18T23:00:42.2008863-04:00 80000038-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 5 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (408d7780)
+2021-04-18T23:01:55.0960458-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-18T23:01:55.0998192-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-18T23:02:43.9770569-04:00 80000021-0000-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 6 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (41e60dd9)
+2021-04-18T23:04:40.8447304-04:00 8000002e-0002-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 6 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (41e60dd9)
+2021-04-18T23:04:43.1453589-04:00 8000000a-0001-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 6 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (41e60dd9)
+2021-04-18T23:04:44.8311803-04:00 8000000e-0001-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 6 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (41e60dd9)
+2021-04-18T23:06:26.6447547-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-18T23:06:26.6509979-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-18T23:07:39.3221388-04:00 80000034-0002-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 6 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (41e60dd9)
+2021-04-18T23:07:43.6108829-04:00 80000013-0003-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 6 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (41e60dd9)
+2021-04-18T23:07:45.7845526-04:00 80000015-0003-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-057 - View Table relation with more than 6 tables is not supported
+   at BuildNextWorld.Models.DbIntellisense..ctor(String dbname, String table, String Alias, Int32 _control) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 179
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 307
+   at BuildNextWorld.Models.DbIntellisense.GetAllColumnsList() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 316
+   at BuildNextWorld.Models.DbIntellisense.SelectFromTable() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 246
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 156
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.ViewDataRecords(Int64 id, Int32 pageNo, String orderBy) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 105
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (41e60dd9)
+2021-04-18T23:13:22.5354653-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-18T23:13:22.5420034-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-18T23:16:53.9363776-04:00 80000030-0000-fa00-b63f-84710c7967bb [ERR] ERROR-->System.ArgumentOutOfRangeException: Length cannot be less than zero. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at BuildNextWorld.Models.DbIntellisense.GetInsertQuery(Dictionary`2 columnValue) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 545
+   at BuildNextWorld.Models.DbIntellisense.InsertIntoTable(Dictionary`2 dataIdValues) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 442
+   at BuildNextWorld.Core.LogicalMiddleware.InternalInsertLogic(Dictionary`2 indata) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 201
+   at BuildNextWorld.Core.LogicalMiddleware.InsertLogic(IFormCollection data) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 132
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.NewRowSubmit(String logic, IFormCollection formValues, String ___dbname___, String ___tablename___, String ___viewid___) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (cf9ea485)
+2021-04-18T23:17:11.4099443-04:00 80000078-0001-ff00-b63f-84710c7967bb [ERR] ERROR-->System.ArgumentOutOfRangeException: Length cannot be less than zero. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at BuildNextWorld.Models.DbIntellisense.GetInsertQuery(Dictionary`2 columnValue) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 545
+   at BuildNextWorld.Models.DbIntellisense.InsertIntoTable(Dictionary`2 dataIdValues) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 442
+   at BuildNextWorld.Core.LogicalMiddleware.InternalInsertLogic(Dictionary`2 indata) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 201
+   at BuildNextWorld.Core.LogicalMiddleware.InsertLogic(IFormCollection data) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 132
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.NewRowSubmit(String logic, IFormCollection formValues, String ___dbname___, String ___tablename___, String ___viewid___) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (cf9ea485)
+2021-04-18T23:17:31.2273360-04:00 8000004c-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.IO.IOException: The process cannot access the file 'C:\PC Data\Developement\CA\BuildNextWorldPublish\Logs\buidnextworld-cms-20210418.log' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at BuildNextWorld.Core.ApplicationHelpers.IsTextFile(String fullFilePath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationHelpers.cs:line 676
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.Index(String src, String action, String logic, String typ) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (3b44d156)
+2021-04-18T23:17:37.7854241-04:00 8000004e-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.IO.IOException: The process cannot access the file 'C:\PC Data\Developement\CA\BuildNextWorldPublish\Logs\buidnextworld-cms-20210418.log' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at BuildNextWorld.Core.ApplicationHelpers.IsTextFile(String fullFilePath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationHelpers.cs:line 676
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.Index(String src, String action, String logic, String typ) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (3b44d156)
+2021-04-18T23:21:00.5088821-04:00 80000080-0001-ff00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '1' for key 'PRIMARY'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BuildNextWorld.Models.DbIntellisense.ExecuteUpdate() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 585
+   at BuildNextWorld.Models.DbIntellisense.InsertIntoTable(Dictionary`2 dataIdValues) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 442
+   at BuildNextWorld.Core.LogicalMiddleware.InternalInsertLogic(Dictionary`2 indata) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 201
+   at BuildNextWorld.Core.LogicalMiddleware.InsertLogic(IFormCollection data) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 132
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.NewRowSubmit(String logic, IFormCollection formValues, String ___dbname___, String ___tablename___, String ___viewid___) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (f861ecb6)
+2021-04-18T23:21:14.8436706-04:00 8000005c-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '1' for key 'PRIMARY'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BuildNextWorld.Models.DbIntellisense.ExecuteUpdate() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 585
+   at BuildNextWorld.Models.DbIntellisense.InsertIntoTable(Dictionary`2 dataIdValues) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 442
+   at BuildNextWorld.Core.LogicalMiddleware.InternalInsertLogic(Dictionary`2 indata) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 201
+   at BuildNextWorld.Core.LogicalMiddleware.InsertLogic(IFormCollection data) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 132
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.NewRowSubmit(String logic, IFormCollection formValues, String ___dbname___, String ___tablename___, String ___viewid___) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (f861ecb6)
+2021-04-18T23:22:31.5504627-04:00 8000003a-0000-fa00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '1' for key 'PRIMARY'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BuildNextWorld.Models.DbIntellisense.ExecuteUpdate() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 585
+   at BuildNextWorld.Models.DbIntellisense.InsertIntoTable(Dictionary`2 dataIdValues) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 442
+   at BuildNextWorld.Core.LogicalMiddleware.InternalInsertLogic(Dictionary`2 indata) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 201
+   at BuildNextWorld.Core.LogicalMiddleware.InsertLogic(IFormCollection data) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 132
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.NewRowSubmit(String logic, IFormCollection formValues, String ___dbname___, String ___tablename___, String ___viewid___) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (f861ecb6)
+2021-04-18T23:26:28.9108244-04:00 80000088-0001-ff00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '1' for key 'PRIMARY'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BuildNextWorld.Models.DbIntellisense.ExecuteUpdate() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 585
+   at BuildNextWorld.Models.DbIntellisense.InsertIntoTable(Dictionary`2 dataIdValues) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 442
+   at BuildNextWorld.Core.LogicalMiddleware.InternalInsertLogic(Dictionary`2 indata) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 201
+   at BuildNextWorld.Core.LogicalMiddleware.InsertLogic(IFormCollection data) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 132
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.NewRowSubmit(String logic, IFormCollection formValues, String ___dbname___, String ___tablename___, String ___viewid___) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (f861ecb6)
+2021-04-18T23:29:25.8275705-04:00 80000035-0002-fc00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`bnw_bnw_app`.`series_master`, CONSTRAINT `series_master_ibfk_2` FOREIGN KEY (`parent_id`) REFERENCES `series_master` (`id`))
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BuildNextWorld.Models.DbIntellisense.ExecuteUpdate() in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 585
+   at BuildNextWorld.Models.DbIntellisense.InsertIntoTable(Dictionary`2 dataIdValues) in C:\PC Data\Developement\CA\BuildNextWorld\Models\AutomaticSqlQuery.cs:line 442
+   at BuildNextWorld.Core.LogicalMiddleware.InternalInsertLogic(Dictionary`2 indata) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 201
+   at BuildNextWorld.Core.LogicalMiddleware.InsertLogic(IFormCollection data) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 132
+   at BuildNextWorld.Areas.Console.Controllers.DataManipulationController.NewRowSubmit(String logic, IFormCollection formValues, String ___dbname___, String ___tablename___, String ___viewid___) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\DataManipulationController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 83 (b00016df)

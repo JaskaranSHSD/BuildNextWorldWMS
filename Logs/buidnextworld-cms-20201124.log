@@ -1,0 +1,172 @@
+2020-11-24T18:56:03.6557139-05:00 80000004-0000-fa00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-11-24T18:56:03.6680508-05:00  [ERR] Error occurred executing "workItem". (0e799fa1)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.<>c__DisplayClass9_0.<<CaptureTraffic>b__0>d.MoveNext() in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 247
+--- End of stack trace from previous location where exception was thrown ---
+   at BuildNextWorld.Core.QueuedHostedService.BackgroundProcessing(CancellationToken stoppingToken) in C:\PC Data\Developement\CA\BuildNextWorld\Core\BackgroundTaskQueue.cs:line 63
+2020-11-24T18:56:03.6788825-05:00 80000004-0000-fa00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 72
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-11-24T18:56:05.7291646-05:00 80000004-0000-fa00-b63f-84710c7967bb [ERR] An exception was thrown attempting to execute the error handler. (e55ade05)
+System.ArgumentException: An item with the same key has already been added. Key: ROUTESINFO
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.AspNetCore.Http.ItemsDictionary.System.Collections.Generic.IDictionary<System.Object,System.Object>.Add(Object key, Object value)
+   at BuildNextWorld.Core.RoutingHelper.ExecuteRoutingService(String path, RewriteContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\RoutingService.cs:line 114
+   at BuildNextWorld.Core.RoutingService.ApplyRule(RewriteContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\RoutingService.cs:line 19
+   at Microsoft.AspNetCore.Rewrite.RewriteMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+2020-11-24T18:56:05.7507547-05:00 80000004-0000-fa00-b63f-84710c7967bb [ERR] Connection ID ""18014398511092596739"", Request ID ""80000004-0000-fa00-b63f-84710c7967bb"": An unhandled exception was thrown by the application. (bf316047)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 72
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-11-24T18:59:06.1444082-05:00 80000003-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-11-24T18:59:06.1451693-05:00  [ERR] Error occurred executing "workItem". (0e799fa1)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.<>c__DisplayClass9_0.<<CaptureTraffic>b__0>d.MoveNext() in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 247
+--- End of stack trace from previous location where exception was thrown ---
+   at BuildNextWorld.Core.QueuedHostedService.BackgroundProcessing(CancellationToken stoppingToken) in C:\PC Data\Developement\CA\BuildNextWorld\Core\BackgroundTaskQueue.cs:line 63
+2020-11-24T18:59:06.1463872-05:00 80000003-0003-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 72
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-11-24T18:59:08.1913379-05:00 80000003-0003-ff00-b63f-84710c7967bb [ERR] An exception was thrown attempting to execute the error handler. (e55ade05)
+System.ArgumentException: An item with the same key has already been added. Key: ROUTESINFO
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.AspNetCore.Http.ItemsDictionary.System.Collections.Generic.IDictionary<System.Object,System.Object>.Add(Object key, Object value)
+   at BuildNextWorld.Core.RoutingHelper.ExecuteRoutingService(String path, RewriteContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\RoutingService.cs:line 114
+   at BuildNextWorld.Core.RoutingService.ApplyRule(RewriteContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\RoutingService.cs:line 19
+   at Microsoft.AspNetCore.Rewrite.RewriteMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+2020-11-24T18:59:08.1959014-05:00 80000003-0003-ff00-b63f-84710c7967bb [ERR] Connection ID ""18374686494167138306"", Request ID ""80000003-0003-ff00-b63f-84710c7967bb"": An unhandled exception was thrown by the application. (bf316047)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 72
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-11-24T18:59:12.7978474-05:00 80000002-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-11-24T18:59:12.9214861-05:00  [ERR] Error occurred executing "workItem". (0e799fa1)
+System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Items()
+   at BuildNextWorld.Core.SpringdellMiddleware.<>c__DisplayClass9_0.<<CaptureTraffic>b__0>d.MoveNext() in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 247
+--- End of stack trace from previous location where exception was thrown ---
+   at BuildNextWorld.Core.QueuedHostedService.BackgroundProcessing(CancellationToken stoppingToken) in C:\PC Data\Developement\CA\BuildNextWorld\Core\BackgroundTaskQueue.cs:line 63
+2020-11-24T19:19:52.3651912-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-24T19:19:52.3714315-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)

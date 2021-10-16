@@ -1,0 +1,266 @@
+2020-12-06T20:57:01.2178289-05:00  [ERR] Error occurred executing "workItem". (0e799fa1)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.<>c__DisplayClass9_0.<<CaptureTraffic>b__0>d.MoveNext() in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 247
+--- End of stack trace from previous location where exception was thrown ---
+   at BuildNextWorld.Core.QueuedHostedService.BackgroundProcessing(CancellationToken stoppingToken) in C:\PC Data\Developement\CA\BuildNextWorld\Core\BackgroundTaskQueue.cs:line 63
+2020-12-06T20:57:01.1966770-05:00 80000003-0000-fd00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-12-06T20:57:05.9046320-05:00 80000004-0001-fc00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-12-06T20:57:42.3430318-05:00 80000007-0002-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-06T20:57:42.3621914-05:00 80000009-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-06T20:57:42.3737715-05:00 80000002-0002-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-06T20:57:43.6242482-05:00 80000004-0002-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-06T20:57:43.6990136-05:00 80000004-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-06T20:58:17.5678325-05:00 80000011-0000-fc00-b63f-84710c7967bb [ERR] ERROR-->System.IO.FileNotFoundException: Could not load file or assembly 'System.Collections.Generic, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'System.Collections.Generic, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at RazorEngineCore.RazorEngineCompilationOptionsBuilder.AddAssemblyReferenceByName(String assemblyName)
+   at BuildNextWorld.Core.REngineCore.<>c.<CompileAndSave>b__17_0(IRazorEngineCompilationOptionsBuilder builder) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 87
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51
+
+ (3b7e939c)
+2020-12-06T20:59:47.3244035-05:00 80000013-0000-fc00-b63f-84710c7967bb [ERR] ERROR-->System.IO.FileNotFoundException: Could not load file or assembly 'System.Collections.Generic, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'System.Collections.Generic, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at RazorEngineCore.RazorEngineCompilationOptionsBuilder.AddAssemblyReferenceByName(String assemblyName)
+   at BuildNextWorld.Core.REngineCore.<>c.<CompileAndSave>b__17_0(IRazorEngineCompilationOptionsBuilder builder) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 87
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51
+
+ (3b7e939c)
+2020-12-06T20:59:50.4743355-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-06T20:59:50.4787736-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-06T21:00:06.4043214-05:00 80000008-0001-fb00-b63f-84710c7967bb [ERR] ERROR-->RazorEngineCore.RazorEngineCompilationException: Unable to compile template: 445m4ldd.ba5(5,17): error CS0246: The type or namespace name 'Dictionary<,>' could not be found (are you missing a using directive or an assembly reference?)
+   at RazorEngineCore.RazorEngine.CreateAndCompileToStream(String templateSource, RazorEngineCompilationOptions options)
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (595f8e25)
+2020-12-06T21:06:47.5617395-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-06T21:06:47.5690169-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-06T21:10:42.0038065-05:00 80000006-0003-fd00-b63f-84710c7967bb [ERR] ERROR-->RazorEngineCore.RazorEngineCompilationException: Unable to compile template: (26,25): error CS1001: Identifier expected
+   at RazorEngineCore.RazorEngine.CreateAndCompileToStream(String templateSource, RazorEngineCompilationOptions options)
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (2eb08079)
+2020-12-06T21:10:55.8269310-05:00 80000015-0000-fc00-b63f-84710c7967bb [ERR] ERROR-->RazorEngineCore.RazorEngineCompilationException: Unable to compile template: (26,25): error CS1001: Identifier expected
+   at RazorEngineCore.RazorEngine.CreateAndCompileToStream(String templateSource, RazorEngineCompilationOptions options)
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (2eb08079)
+2020-12-06T21:11:32.9683668-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-06T21:11:32.9730028-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-06T21:12:23.0600769-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-06T21:12:23.0766112-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-06T21:37:33.7353770-05:00 80000015-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->RazorEngineCore.RazorEngineCompilationException: Unable to compile template: yaoexba3.15a(9,17): error CS0012: The type 'List<>' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+   at RazorEngineCore.RazorEngine.CreateAndCompileToStream(String templateSource, RazorEngineCompilationOptions options)
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (bc83892f)
+2020-12-06T21:38:54.0147863-05:00 80000014-0001-fb00-b63f-84710c7967bb [ERR] ERROR-->RazorEngineCore.RazorEngineCompilationException: Unable to compile template: ddbdlh0r.qqz(9,17): error CS0012: The type 'List<>' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+   at RazorEngineCore.RazorEngine.CreateAndCompileToStream(String templateSource, RazorEngineCompilationOptions options)
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (34c63216)
+2020-12-06T21:59:00.5094626-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-06T21:59:00.5146972-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)

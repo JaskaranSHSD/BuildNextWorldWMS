@@ -1,0 +1,224 @@
+2020-11-19T09:26:25.8776781-05:00 80000002-0000-fd00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-11-19T09:26:25.9781929-05:00 80000002-0000-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 72
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-11-19T09:26:28.0145405-05:00 80000002-0000-fd00-b63f-84710c7967bb [ERR] An exception was thrown attempting to execute the error handler. (e55ade05)
+System.ArgumentException: An item with the same key has already been added. Key: ROUTESINFO
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.AspNetCore.Http.ItemsDictionary.System.Collections.Generic.IDictionary<System.Object,System.Object>.Add(Object key, Object value)
+   at BuildNextWorld.Core.RoutingHelper.ExecuteRoutingService(String path, RewriteContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\RoutingService.cs:line 114
+   at BuildNextWorld.Core.RoutingService.ApplyRule(RewriteContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\RoutingService.cs:line 19
+   at Microsoft.AspNetCore.Rewrite.RewriteMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+2020-11-19T09:26:28.0430621-05:00 80000002-0000-fd00-b63f-84710c7967bb [ERR] Connection ID ""18230571293206380545"", Request ID ""80000002-0000-fd00-b63f-84710c7967bb"": An unhandled exception was thrown by the application. (bf316047)
+System.InvalidCastException: Unable to cast object of type 'Microsoft.AspNetCore.Http.PathString' to type 'System.String'.
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 72
+   at React.AspNet.BabelFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-11-19T09:26:33.1814144-05:00 80000004-0000-fd00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-11-19T09:28:51.2115952-05:00 80000002-0000-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:51.2185529-05:00 80000002-0000-fb00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:51.2223208-05:00 80000008-0000-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:51.2906974-05:00 80000002-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:55.4691288-05:00 80000004-0000-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:55.6123290-05:00 80000004-0000-fb00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:56.1234067-05:00 80000004-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:59.2688094-05:00 80000006-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:59.3750926-05:00 80000008-0000-fb00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:28:59.9592879-05:00 8000000a-0000-fb00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:29:05.6964569-05:00 8000000c-0000-fb00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:30:38.9963716-05:00 80000002-0003-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:30:39.3786715-05:00 80000008-0003-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:32:43.2582010-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T09:32:43.2731534-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-11-19T09:32:51.3693676-05:00 80000004-0002-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:34:24.4578393-05:00 8000000e-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T09:35:50.1652844-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T09:35:50.1701142-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-11-19T10:15:54.9855650-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T10:15:54.9943413-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-11-19T10:30:34.8247194-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T10:30:34.8342464-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-11-19T11:27:18.3112972-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T11:27:18.3309050-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-11-19T12:02:14.8242584-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T12:02:14.8367747-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-11-19T18:44:02.1614113-05:00 80000013-0001-fb00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:44:02.1525967-05:00 80000027-0001-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:44:02.1528205-05:00 80000010-0001-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:44:02.2787541-05:00 8000001e-0003-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:44:02.4675619-05:00 80000012-0001-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:45:42.6286880-05:00 80000018-0001-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:45:42.6447151-05:00 80000029-0001-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:45:42.6622463-05:00 80000033-0000-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:45:42.7021050-05:00 8000000c-0002-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T18:45:42.7270020-05:00 80000035-0000-fd00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T21:29:06.8593968-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T21:29:06.8656035-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-11-19T22:07:27.4606909-05:00 80000034-0001-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T22:07:27.4959009-05:00 8000001d-0001-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T22:07:27.5533339-05:00 80000015-0001-fb00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T22:07:27.6245795-05:00 80000019-0000-fc00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-11-19T22:22:06.7049635-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-11-19T22:22:06.7092136-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)

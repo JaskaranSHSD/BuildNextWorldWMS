@@ -1,0 +1,34 @@
+2021-03-29T03:06:41.1068950-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-03-29T03:06:41.1334710-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-03-29T03:26:22.8265436-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-03-29T03:26:22.8628434-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-03-29T07:52:38.3924920-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-03-29T07:52:38.4047333-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-03-29T20:04:37.4420913-04:00 80000036-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->System.IO.IOException: The process cannot access the file 'C:\PC Data\Developement\CA\BuildNextWorldPublish\Themes\Springdell_default\index.dll' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at RazorEngineCore.RazorEngineCompiledTemplate`1.LoadFromFileAsync(String fileName)
+   at BuildNextWorld.Core.REngineCore.FindTemplate(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 158
+   at BuildNextWorld.Core.REngineCore.RunInternal(String viewPath, ViewModel model, ControllerContext context, Boolean isIncluded) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 212
+   at BuildNextWorld.Core.REngineCore.Run(String viewContent, String viewFile, ViewType viewType, ViewModel model, ControllerContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 203
+   at BuildNextWorld.Controllers.GlobalController.Index() in C:\PC Data\Developement\CA\BuildNextWorld\Controllers\GlobalController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (6230742e)
+2021-03-29T20:25:34.0545556-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-03-29T20:25:34.0577561-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)

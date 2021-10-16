@@ -1,0 +1,252 @@
+2020-12-07T10:43:36.1833423-05:00 80000004-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (No connection could be made because the target machine actively refused it. 127.0.0.1:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No connection could be made because the target machine actively refused it. 127.0.0.1:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.DoMultipleAddressConnectCallback(Object result, MultipleAddressConnectAsyncResult context)
+   at System.Net.Sockets.Socket.MultipleAddressConnectCallback(IAsyncResult result)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 21
+   at BuildNextWorld.Core.SpringdellMiddleware.LoginSystemActivate(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 135
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 48 (6ca9501a)
+2020-12-07T10:44:54.8440666-05:00 8000000c-0003-ff00-b63f-84710c7967bb [ERR] ERROR-->RazorEngineCore.RazorEngineCompilationException: Unable to compile template: hs02uu3g.mk2(9,17): error CS0012: The type 'List<>' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+   at RazorEngineCore.RazorEngine.CreateAndCompileToStream(String templateSource, RazorEngineCompilationOptions options)
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (6715c395)
+2020-12-07T10:45:11.7537763-05:00 80000009-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->RazorEngineCore.RazorEngineCompilationException: Unable to compile template: 0gsaouhm.df5(9,17): error CS0012: The type 'List<>' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+   at RazorEngineCore.RazorEngine.CreateAndCompileToStream(String templateSource, RazorEngineCompilationOptions options)
+   at RazorEngineCore.RazorEngine.Compile[T](String content, Action`1 builderAction)
+   at BuildNextWorld.Core.REngineCore.CompileAndSave(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 83
+   at BuildNextWorld.Areas.Console.Controllers.FileEditorController.RazorServices(String name, String actionName, String args) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\FileEditorController.cs:line 93
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (a9f0f37b)
+2020-12-07T10:48:12.7809148-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-07T10:48:12.7877137-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-07T11:11:13.0508717-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-07T11:11:13.0640165-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-07T18:08:56.2737982-05:00 8000000f-0000-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-031 - Access denied
+   at BuildNextWorld.Core.LogicalMiddleware..ctor(String ViewShortCode, ControllerContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 51
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 180
+   at TemplateNamespace.Template.ExecuteAsync()
+   at RazorEngineCore.RazorEngineCompiledTemplate`1.RunAsync(Action`1 initializer)
+   at BuildNextWorld.Core.REngineCore.RunInternal(String viewPath, ViewModel model, ControllerContext context, Boolean isIncluded) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 213
+   at BuildNextWorld.Core.REngineCore.Run(String viewContent, String viewFile, ViewType viewType, ViewModel model, ControllerContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 203
+   at BuildNextWorld.Controllers.GlobalController.Index() in C:\PC Data\Developement\CA\BuildNextWorld\Controllers\GlobalController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (b6209ae4)
+2020-12-07T18:10:11.7317427-05:00 80000017-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-020 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 267
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (73428f7b)
+2020-12-07T18:10:14.3949724-05:00 80000019-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-020 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 267
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (73428f7b)
+2020-12-07T18:10:33.5277299-05:00 80000014-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-020 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 267
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (73428f7b)
+2020-12-07T18:10:46.3807089-05:00 8000001d-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: Route 1 and Route 2 in combination already exist in routing table.
+   at BuildNextWorld.Areas.Console.Controllers.PageController.UpdateRoutes(String orgpagetype, String operationalFile, String routevalue1, String routevalue2, Int32 noseg, Int32 operationId) in C:\PC Data\Developement\CA\BuildNextWorld\Areas\Console\Controllers\PageController.cs:line 150
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (d39f2f7c)
+2020-12-07T18:11:07.2111164-05:00 8000001f-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-017 Access to page/resource is denied
+   at BuildNextWorld.Core.MiddlewareSecurity.FinalDecision() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 148
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 68
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (63fa2d47)
+2020-12-07T18:11:21.0987111-05:00 80000002-0002-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:11:21.1090584-05:00 8000001d-0000-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:11:22.3842537-05:00 80000023-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:12:36.9662574-05:00 80000025-0001-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 281
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 68
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 79 (14f4db30)
+2020-12-07T18:12:37.0261659-05:00 80000007-0001-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 281
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 68
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 79 (14f4db30)
+2020-12-07T18:21:14.8846529-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-07T18:21:14.8975568-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-07T18:21:50.9411109-05:00 8000001e-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-031 - Access denied
+   at BuildNextWorld.Core.LogicalMiddleware..ctor(String ViewShortCode, ControllerContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 51
+   at BuildNextWorld.Core.ShortCodeLanguage.Logic(String logicName, Dictionary`2 Where, String conop) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ShortCodeLanguage.cs:line 180
+   at TemplateNamespace.Template.ExecuteAsync()
+   at RazorEngineCore.RazorEngineCompiledTemplate`1.RunAsync(Action`1 initializer)
+   at BuildNextWorld.Core.REngineCore.RunInternal(String viewPath, ViewModel model, ControllerContext context, Boolean isIncluded) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 213
+   at BuildNextWorld.Core.REngineCore.Run(String viewContent, String viewFile, ViewType viewType, ViewModel model, ControllerContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 203
+   at BuildNextWorld.Controllers.GlobalController.Index() in C:\PC Data\Developement\CA\BuildNextWorld\Controllers\GlobalController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 51 (b6209ae4)
+2020-12-07T18:22:03.8156632-05:00 80000002-0000-f700-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:22:03.8158570-05:00 80000006-0000-f800-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:22:03.8802787-05:00 80000020-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:22:03.9003969-05:00 80000022-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:22:11.8553340-05:00 80000009-0001-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:22:14.1100965-05:00 80000010-0003-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-020 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 268
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (7da8510d)
+2020-12-07T18:22:14.2525517-05:00 8000000b-0000-f900-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:32:21.7209332-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-07T18:32:21.7278168-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-07T18:33:02.6869371-05:00 80000024-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-020 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 268
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (7da8510d)
+2020-12-07T18:33:02.8544959-05:00 8000000b-0001-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:35:47.5855152-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-07T18:35:47.5900815-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-07T18:36:08.4850902-05:00 80000023-0000-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-020 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 268
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (7da8510d)
+2020-12-07T18:36:08.6430707-05:00 80000026-0002-ff00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:42:14.0319106-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-07T18:42:14.0401973-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2020-12-07T18:43:01.9297326-05:00 8000001a-0003-fe00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-017 Access to page/resource is denied
+   at BuildNextWorld.Core.MiddlewareSecurity.FinalDecision() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 148
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 68
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (63fa2d47)
+2020-12-07T18:43:04.6496937-05:00 8000002d-0000-fa00-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-017 Access to page/resource is denied
+   at BuildNextWorld.Core.MiddlewareSecurity.FinalDecision() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 148
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 68
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (63fa2d47)
+2020-12-07T18:43:19.7714846-05:00 8000000d-0000-f900-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T18:43:19.7798519-05:00 80000004-0000-f700-b63f-84710c7967bb [ERR] ERROR-->System.Exception: EX-019 - Page not found.
+   at BuildNextWorld.Core.MiddlewareSecurity.FindAreaApplication() in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 244
+   at BuildNextWorld.Core.MiddlewareSecurity..ctor(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\ApplicationSecurity.cs:line 59
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 49 (2cc053bb)
+2020-12-07T19:04:14.1401777-05:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2020-12-07T19:04:14.1437013-05:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)

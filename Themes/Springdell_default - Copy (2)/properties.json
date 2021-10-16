@@ -1,0 +1,9 @@
+{
+  "ThemeName": "BuildNextWorld Default theme",
+  "Version": "1.0",
+  "Description": "Get started with BuildNextWorld at BuildNextWorld/BuildNextWorld",
+  "Website": "buildnextworld.com/springdell",
+  "Author": "BuildNextWorld",
+  "License": "GPLv2 License",
+  "activateRazor" :  "true"
+}

@@ -1,0 +1,8 @@
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'wms_bnw_console'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.ReadOk(Boolean read)
+   at MySql.Data.MySqlClient.NativeDriver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.Driver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.MySqlConnection.ChangeDatabase(String databaseName)
+   at BuildNextWorld.Models.DatabaseServices.getMySQLConnection(String databaseName) in C:\PC Data\Developement\CA\BuildNextWorld\Models\DatabaseServices.cs:line 22
+   at BuildNextWorld.Core.RoutingHelper.ExecuteRoutingService(String path, RewriteContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\RoutingService.cs:line 99

@@ -1,0 +1,1 @@
+getest >> 0 >> index

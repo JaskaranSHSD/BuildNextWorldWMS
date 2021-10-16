@@ -1,0 +1,68 @@
+2021-04-19T03:04:47.2120638-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-19T03:04:47.2324553-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-19T03:11:32.7412290-04:00 80000033-0002-fb00-b63f-84710c7967bb [ERR] ERROR-->System.IO.IOException: The process cannot access the file 'C:\PC Data\Developement\CA\BuildNextWorldPublish\Themes\Springdell_default\index.dll' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at RazorEngineCore.RazorEngineCompiledTemplate`1.LoadFromFileAsync(String fileName)
+   at BuildNextWorld.Core.REngineCore.FindTemplate(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 158
+   at BuildNextWorld.Core.REngineCore.RunInternal(String viewPath, ViewModel model, ControllerContext context, Boolean isIncluded) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 212
+   at BuildNextWorld.Core.REngineCore.Run(String viewContent, String viewFile, ViewType viewType, ViewModel model, ControllerContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 203
+   at BuildNextWorld.Controllers.GlobalController.Index() in C:\PC Data\Developement\CA\BuildNextWorld\Controllers\GlobalController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (1cb76931)
+2021-04-19T03:11:32.7412291-04:00 8000002e-0001-fd00-b63f-84710c7967bb [ERR] ERROR-->System.IO.IOException: The process cannot access the file 'C:\PC Data\Developement\CA\BuildNextWorldPublish\Themes\Springdell_default\index.dll' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at RazorEngineCore.RazorEngineCompiledTemplate`1.LoadFromFileAsync(String fileName)
+   at BuildNextWorld.Core.REngineCore.FindTemplate(String viewPath) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 158
+   at BuildNextWorld.Core.REngineCore.RunInternal(String viewPath, ViewModel model, ControllerContext context, Boolean isIncluded) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 212
+   at BuildNextWorld.Core.REngineCore.Run(String viewContent, String viewFile, ViewType viewType, ViewModel model, ControllerContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\REngineCore.cs:line 203
+   at BuildNextWorld.Controllers.GlobalController.Index() in C:\PC Data\Developement\CA\BuildNextWorld\Controllers\GlobalController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at BuildNextWorld.Core.SpringdellMiddleware.InvokeAsync(HttpContext context) in C:\PC Data\Developement\CA\BuildNextWorld\Core\SpringdellMiddleware.cs:line 55 (1cb76931)
+2021-04-19T03:53:30.6517139-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-19T03:53:30.6587943-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-19T04:13:36.2438754-04:00 8000005c-0002-fc00-b63f-84710c7967bb [ERR] System.Exception: EX-030 - Access denied
+   at BuildNextWorld.Core.LogicalMiddleware..ctor(String ViewShortCode, String allowedListmile, ControllerContext context, EventsHandling _EventsTagged, Boolean throwException) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 37
+   at BuildNextWorld.Controllers.ApiEngineController.get(String shortcode) in C:\PC Data\Developement\CA\BuildNextWorld\Controllers\ApiEngineController.cs:line 88 (e54e11ec)
+2021-04-19T04:13:40.8994983-04:00 80000036-0003-fe00-b63f-84710c7967bb [ERR] System.Exception: EX-030 - Access denied
+   at BuildNextWorld.Core.LogicalMiddleware..ctor(String ViewShortCode, String allowedListmile, ControllerContext context, EventsHandling _EventsTagged, Boolean throwException) in C:\PC Data\Developement\CA\BuildNextWorld\Core\LogicalMiddleware.cs:line 37
+   at BuildNextWorld.Controllers.ApiEngineController.get(String shortcode) in C:\PC Data\Developement\CA\BuildNextWorld\Controllers\ApiEngineController.cs:line 88 (e54e11ec)
+2021-04-19T08:04:18.0684334-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-19T08:04:18.0772335-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-19T08:41:45.2134488-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-19T08:41:45.2397395-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
+2021-04-19T09:19:46.9928720-04:00  [ERR] QUEUED SERVICE WAS STOPPED (9dd9f526)
+2021-04-19T09:19:47.0047207-04:00  [ERR] SCHEDULERS HAS BEEN STOPPED. (89ae2ea4)
